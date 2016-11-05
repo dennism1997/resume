@@ -1,11 +1,46 @@
+/*1f6767*/
 * {
     margin: 0;
     padding: 0;
 }
 
-.menu {
-    position: fixed;
-    display: block;
-    z-index: 1000;
-    right: 0;
+h2, h1{
+    color: #1f6767;
+}
+
+.no-bullets {
+    list-style-type: none;
+}
+
+hr {
+    border: solid #1f6767 1px;
+}
+
+.background-alt {
+    background-color: #ece5dd;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 40px 180px;
+}
+
+.skill-score {
+    float: right;
+}
+
+.skills-list li {
+    line-height: 30px;
+    min-height: 30px;
+    font-size: 15px;
+}
+
+li:hover {
+    background-color: lightgrey;
+}
+
+.parallax-window {
+    width: 100%;
+    min-height: 800px;
+    background: transparent;
 }

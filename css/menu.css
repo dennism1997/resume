@@ -1,0 +1,27 @@
+.menu {
+    list-style-type: none;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu-item {
+    border-radius: 4px;
+}
+
+.menu-item:first-child {
+    visibility: hidden;
+}
+
+li .active {
+    background-color: #1ad300 !important;
+}
+
+
+/*TODO change color*/
+.menu-item, .menu-item :visited, .menu-item:link, .menu-item:hover {
+    background-color: #d3d3d3;
+    color: #c91c3f;
+}
+
+

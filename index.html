@@ -2,47 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dennis Mouwen</title>
 
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/menu.css"/>
 
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                sectionsColor: ['#efefef', '#eaeaea', '#efefef', '#eaeaea', '#efefef', '#eaeaea'],
-                anchors:['aboutAnchor', 'educationAnchor', 'skillsAnchor', 'experienceAnchor' , 'contactAnchor'],
-                menu: '#menu'
-            });
-        });
-    </script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
 
 </head>
 <body>
 
-<ul id="menu" class="menu">
-    <li data-menuanchor="about"><a href="#aboutAnchor">About Me</a></li>
-    <li data-menuanchor="education"><a href="#educationAnchor">Education</a></li>
-    <li data-menuanchor="skills"><a href="#skillsAnchor">Education</a></li>
-    <li data-menuanchor="experience"><a href="#experienceAnchor">Education</a></li>
-    <li data-menuanchor="contact"><a href="#contactAnchor">Education</a></li>
+
+<ul id="menu" class="menu nav nav-pills nav-stacked ">
+    <li class="menu-item" data-menuanchor="start"><a href="#start">start</a></li>
+    <li class="menu-item" data-menuanchor="about"><a href="#about">About Me</a></li>
+    <li class="menu-item" data-menuanchor="education"><a href="#education">Education</a></li>
+    <li class="menu-item" data-menuanchor="skills"><a href="#skills">Skills</a></li>
+    <li class="menu-item" data-menuanchor="experience"><a href="#experience">Experience</a></li>
+    <li class="menu-item" data-menuanchor="contact"><a href="#contact">Contact</a></li>
 </ul>
 
-<div id="fullpage">
-    <div class="section">Start
-    </div>
-    <div class="section">About Me
-    </div>
-    <div class="section">Education
-    </div>
-    <div class="section">Skills
-    </div>
-    <div class="section">Experience
-    </div>
-    <div class="section">Contact
+<div class="parallax-window container-fluid" data-speed="0.3" data-parallax="scroll"
+     data-image-src="resources/images/parallax-1.jpg"></div>
+
+<div class="background-alt">
+    <div id="skills" class="container">
+        <h1 style="text-align: center">Skills</h1>
+        <hr>
+        <h2>Programming Languages</h2>
+        <div class="row">
+
+            <div class="col-md-6">
+                <ul class="skills-list no-bullets">
+                    <li><span class="skill-title">Java</span><span class="skill-score score-4"></span></li>
+                    <li><span class="skill-title">Object Oriented Programming</span><span
+                            class="skill-score score-4"></span></li>
+                    <li><span class="skill-title">C++</span><span class="skill-score score-3"></span></li>
+                    <li><span class="skill-title">MySQL</span><span class="skill-score score-3"></span></li>
+                    <li><span class="skill-title">HTML</span><span class="skill-score score-2"></span></li>
+                    <li><span class="skill-title">CSS</span><span class="skill-score score-2"></span></li>
+                    <li><span class="skill-title">Android</span><span class="skill-score score-2"></span></li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="skills-list no-bullets">
+                    <li><span class="skill-title">GOAL</span><span class="skill-score score-4"></span></li>
+                    <li><span class="skill-title">JavaScript</span><span class="skill-score score-2"></span></li>
+                    <li><span class="skill-title">Python</span><span class="skill-score score-2"></span></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Programming Tools</h2>
+                <ul class="skills-list no-bullets">
+                    <li><span class="skill-title">IntelliJ IDEA</span><span class="skill-score score-5"></span></li>
+                    <li><span class="skill-title">Eclipse</span><span class="skill-score score-5"></span></li>
+                    <li><span class="skill-title">Git / Github / Git Flow</span><span
+                            class="skill-score score-4"></span></li>
+                    <li><span class="skill-title">Microsoft Visual Studio</span><span
+                            class="skill-score score-4"></span></li>
+                    <li><span class="skill-title">Matlab</span><span class="skill-score score-3"></span></li>
+                    <li><span class="skill-title">Android Studio</span><span class="skill-score score-4"></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Languages</h2>
+                <ul class="skills-list no-bullets">
+                    <li><span class="skill-title">Dutch (Mother Tongue)</span><span class="skill-score score-5"></span>
+                    </li>
+                    <li><span class="skill-title">English (B2 Level)</span><span class="skill-score score-5"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Teamwork</h2>
+                <ul class="skills-list no-bullets">
+                    <li><span class="skill-title">Player</span><span class="skill-score">D.S.V.V. Punch H1</span></li>
+                    <li><span class="skill-title">Coach/Trainer</span><span class="skill-score">D.S.V.V. Punch D4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<div class="parallax-window container-fluid" data-speed="0.3" data-parallax="scroll"
+     data-image-src="resources/images/parallax-2.jpeg"></div>
+
+
+
+
 </body>
 </html>

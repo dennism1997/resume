@@ -1,11 +1,12 @@
 /*1f6767*/
-* {
+*, ul {
     margin: 0;
     padding: 0;
 }
 
 h2, h1{
     color: #1f6767;
+    line-height: 36px;
 }
 
 .no-bullets {
@@ -14,15 +15,42 @@ h2, h1{
 
 hr {
     border: solid #1f6767 1px;
+    opacity: 0.2;
 }
 
 .background-alt {
     background-color: #ece5dd;
 }
 
+.background-white {
+    background-color: #ebebeb;
+}
+
 .container {
     max-width: 1280px;
     padding: 40px 180px;
+}
+
+span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+span:hover, h1:hover, h2:hover, p:hover, h3:hover{
+    cursor: default;
+}
+
+.table-borderless tbody tr td,
+.table-borderless tbody tr th,
+.table-borderless thead tr th,
+.table-borderless thead tr td,
+.table-borderless tfoot tr th,
+.table-borderless tfoot tr td {
+    border: none;
+}
+
+#experience-table tr:hover{
+    background-color: #e5e5e5;
 }
 
 .skill-score {
@@ -35,12 +63,16 @@ hr {
     font-size: 15px;
 }
 
-li:hover {
-    background-color: lightgrey;
+#skills li:hover {
+    background-color: #e6dfd7;
 }
 
 .parallax-window {
     width: 100%;
     min-height: 800px;
     background: transparent;
+}
+
+.parallax-short {
+    min-height: 400px;
 }

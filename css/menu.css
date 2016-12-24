@@ -1,27 +1,38 @@
 .menu {
     list-style-type: none;
+    padding: 0;
     position: fixed;
     right: 0;
+    margin-right: 5%;
     z-index: 1000;
+    background-color: #d3d3d3;
+
+    /*Makes sure it is out of the screen when loading js*/
+    top:100%;
 }
 
-.menu-item {
-    border-radius: 4px;
+.menu-item a{
+    display: block;
+    padding: 12px;
+    font-size: 14px;
 }
 
-.menu-item:first-child {
-    visibility: hidden;
+.menu-item .active {
+    background-color: #c9302c;
 }
+
+
+
+/*TODO change color*/
+.menu-item, .menu-item :visited, .menu-item:link, .menu-item:hover {
+    color: #c91c3f;
+}
+
 
 li .active {
     background-color: #1ad300 !important;
 }
 
-
-/*TODO change color*/
-.menu-item, .menu-item :visited, .menu-item:link, .menu-item:hover {
-    background-color: #d3d3d3;
-    color: #c91c3f;
+.top-margin {
+    top: 8.8%;
 }
-
-

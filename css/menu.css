@@ -15,23 +15,27 @@
     display: block;
     padding: 12px;
     font-size: 14px;
+    color: #1f6767 ;
+
 }
 
-.menu-item .active {
-    background-color: #c9302c;
+a, a:active{
+    text-decoration: none !important;
+}
+
+a:hover{
+    background-color: #c9c9c9   ;
+}
+
+.pill-selected{
+    background-color: #1f6767 !important;
+}
+
+.pill-selected > a {
+    color: #e6e6e6;
 }
 
 
-
-/*TODO change color*/
-.menu-item, .menu-item :visited, .menu-item:link, .menu-item:hover {
-    color: #c91c3f;
-}
-
-
-li .active {
-    background-color: #1ad300 !important;
-}
 
 .top-margin {
     top: 8.8%;

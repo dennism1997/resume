@@ -54,54 +54,72 @@ function fillTable() {
     );
 }
 
-function applyClickEvent()
-{
-    $('a').on('click', function(e)
-    {
+function applyClickEvent() {
+    $('a').on('click', function (e) {
         e.preventDefault();
 
-        if( $( $.attr(this, 'href') ).length > 0 )
-        {
+        if ($($.attr(this, 'href')).length > 0) {
             $('html, body').animate(
                 {
-                    scrollTop: $( $.attr(this, 'href') ).offset().top + 1
+                    scrollTop: $($.attr(this, 'href')).offset().top + 1
                 }, 600);
         }
         return false;
     });
 }
 
-function applyNavigationForPhone()
-{
-    $('.navbar li a').click(function(event)
-    {
+function applyNavigationForPhone() {
+    $('.navbar li a').click(function (event) {
         $('.navbar-collapse').removeClass('in').addClass('collapse');
     });
 }
 
-function applyStickyNavigation()
-{
+function applyStickyNavigation() {
     lnStickyNavigation = $('#about').offset().top + 20;
+    about = $('#about');
+    education = $('#education');
+    skills = $('#skills');
+    experience = $('#experience');
+    contact = $('#contact');
 
-    $(window).on('scroll', function()
-    {
+    $(window).on('scroll', function () {
         stickyNavigation();
+        activePill();
     });
 
     stickyNavigation();
+    activePill();
 }
 
-function stickyNavigation()
-{
+function stickyNavigation() {
     var menuTop = $(window).height() * 0.088;
-    if($(window).scrollTop() > lnStickyNavigation - 20)
-    {
-        $('#menu').css({'top' : menuTop});
+    if ($(window).scrollTop() > lnStickyNavigation - 20) {
+        $('#menu').css({'top': menuTop});
         $('#menu').css({'position': 'fixed'})
     }
-    else
-    {
-        $('#menu').css({'top' : $('#about').offset().top + menuTop});
+    else {
+        $('#menu').css({'top': $('#about').offset().top + menuTop});
         $('#menu').css({'position': 'absolute'})
+    }
+}
+
+function activePill() {
+    var scrollBottom = $(window).scrollTop();
+    $("li").removeClass('pill-selected');
+
+
+    if (scrollBottom > contact.offset().top) {
+        $('#contact-anchor').addClass('pill-selected')
+    } else if (scrollBottom > experience.offset().top) {
+        $('#experience-anchor').addClass('pill-selected')
+    } else if (scrollBottom > skills.offset().top) {
+        $('#skills-anchor').addClass('pill-selected')
+
+    } else if (scrollBottom > education.offset().top) {
+        $('#education-anchor').addClass('pill-selected')
+
+    } else if (scrollBottom > about.offset().top) {
+        $('#about-anchor').addClass('pill-selected')
+
     }
 }
